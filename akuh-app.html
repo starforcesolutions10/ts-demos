@@ -1,0 +1,71 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AKUH Care Patient App, concept by TS Ventures</title>
+<style>
+:root{--p:#0b4f4a;--a:#2e9d8f;--bg:#f5f7f8;--ink:#14212b;--mut:#6b7a86}
+*{box-sizing:border-box;margin:0}body{font-family:"Inter","Segoe UI",system-ui,sans-serif;background:radial-gradient(circle at 20% 10%,#2e9d8f33,transparent 40%),linear-gradient(135deg,#eef3f2,#dfe8ec);min-height:100vh;display:flex;gap:56px;align-items:center;justify-content:center;padding:40px;color:var(--ink);flex-wrap:wrap}
+.side{max-width:380px}.side h1{font-family:Georgia,serif;font-size:38px;line-height:1.1;color:var(--p)}.side p{color:var(--mut);margin:14px 0;line-height:1.6}
+.fix{background:#fff;border-radius:14px;padding:14px 16px;margin:8px 0;font-size:14px;box-shadow:0 4px 14px #0001;border-left:4px solid var(--a)}.fix b{display:block;color:var(--p)}
+.phone{width:375px;height:780px;border-radius:48px;background:#0d1216;padding:12px;box-shadow:0 40px 80px #0b2a3a40}
+.scr{width:100%;height:100%;border-radius:38px;background:var(--bg);overflow:hidden;position:relative;display:flex;flex-direction:column}
+.notch{position:absolute;top:8px;left:50%;transform:translateX(-50%);width:110px;height:28px;background:#0d1216;border-radius:20px;z-index:9}
+.view{flex:1;overflow-y:auto;padding:52px 20px 20px;display:none;animation:in .35s ease}.view.on{display:block}
+@keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1}}
+.wm{font-family:Georgia,serif;font-weight:700;color:var(--p);font-size:20px;letter-spacing:.3px}.wm small{display:block;font:500 11px system-ui;color:var(--mut);letter-spacing:2px;text-transform:uppercase}
+.ur{font-family:"Noto Nastaliq Urdu","Jameel Noori Nastaleeq",serif;direction:rtl;color:var(--mut);font-size:14px}
+h2{font-size:22px;margin:6px 0 14px}h3{font-size:15px;margin:18px 0 8px}
+.card{background:#fff;border-radius:18px;padding:16px;margin-bottom:12px;box-shadow:0 2px 10px #0b2a3a10}
+.hero{background:linear-gradient(135deg,var(--p),#17766c);color:#fff}.hero p{opacity:.85;font-size:13px}
+.btn{display:block;width:100%;border:0;border-radius:14px;padding:15px;background:var(--p);color:#fff;font-weight:600;font-size:15px;cursor:pointer;transition:.2s}.btn:active{transform:scale(.98)}.btn.g{background:#fff;color:var(--p);border:1.5px solid var(--p)}
+input,select{width:100%;padding:14px;border-radius:12px;border:1.5px solid #dbe3e8;font-size:15px;margin:6px 0 12px;background:#fff}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.tile{background:#fff;border-radius:16px;padding:14px;cursor:pointer;box-shadow:0 2px 10px #0b2a3a10;transition:.2s}.tile:hover{transform:translateY(-2px)}.tile i{font-style:normal;font-size:22px;display:block;margin-bottom:6px}.tile b{font-size:14px}.tile span{display:block;font-size:12px;color:var(--mut)}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px}.mut{color:var(--mut);font-size:13px}
+.chip{display:inline-block;padding:8px 12px;border-radius:20px;background:#fff;border:1.5px solid #dbe3e8;font-size:13px;margin:3px;cursor:pointer}.chip.on{background:var(--p);color:#fff;border-color:var(--p)}
+.ok{color:#11806a;font-weight:600;font-size:12px;background:#e3f5ef;padding:4px 8px;border-radius:8px}.warn{color:#a35b00;background:#fff3df;font-weight:600;font-size:12px;padding:4px 8px;border-radius:8px}
+.av{width:46px;height:46px;border-radius:50%;background:var(--a);color:#fff;display:grid;place-items:center;font-weight:700;flex:none}
+.tab{display:flex;justify-content:space-around;background:#fff;padding:10px 0 22px;border-top:1px solid #e6ecef}.tab a{font-size:11px;color:var(--mut);text-align:center;cursor:pointer;text-decoration:none}.tab a.on{color:var(--p);font-weight:700}.tab a i{font-style:normal;display:block;font-size:19px}
+table{width:100%;font-size:13px;border-collapse:collapse}td{padding:8px 0;border-bottom:1px solid #eef2f4}td:last-child{text-align:right;font-weight:600}
+.badge{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);background:#14212bdd;color:#fff;font-size:12px;padding:8px 14px;border-radius:20px;z-index:99}
+.toast{position:absolute;left:20px;right:20px;bottom:90px;background:#14212b;color:#fff;padding:12px;border-radius:12px;font-size:13px;opacity:0;transition:.3s;pointer-events:none}.toast.on{opacity:1}
+.pdf{background:#fff;border:1px solid #e6ecef;border-radius:12px;padding:14px;font-size:12px}.bar{height:6px;background:#eef2f4;border-radius:4px;position:relative;margin-top:4px}.bar span{position:absolute;height:100%;border-radius:4px;background:var(--a)}
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=DM+Sans:wght@400;500;700&display=swap");
+body{flex-direction:row-reverse;font-family:"DM Sans",system-ui,sans-serif;background:radial-gradient(ellipse at 80% 0%,#cfeee8,transparent 55%),#f3f8f6}
+.side h1,.wm{font-family:"Fraunces",Georgia,serif}.side h1{font-size:46px}
+.fix{border-left:0;border-radius:999px;padding:12px 20px;background:#0b4f4a;color:#d9f2ec}.fix b{display:inline;color:#fff;margin-right:8px}
+.card,.tile{border-radius:26px}.tile i{width:44px;height:44px;border-radius:50%;background:#e1f3ef;color:#0b4f4a;display:grid!important;place-items:center;font-size:20px}
+.btn{border-radius:999px}.chip{border-radius:999px}.tab{margin:0 14px 16px;border-radius:24px;border:0;box-shadow:0 8px 24px #0b4f4a22;padding:10px 0 12px}</style></head><body>
+<div class="side"><div class="wm">AKUH Care<small>Patient App, reimagined</small></div><h1>One patient app.<br>Finally worth five stars.</h1><p>Today AKUH Patient Care sits at 1.7 stars from 1.18K reviews on Google Play and has not been updated since March 2022, while Family Hifazat sits at 2.8 stars from 730 reviews. This concept merges both into one reliable app.</p><div class="fix"><b>Reliable sign-in</b>OTP + fingerprint</div><div class="fix"><b>Reports that open</b>saved for offline viewing</div><div class="fix"><b>Whole family</b>Hifazat members as profiles</div><p class="mut">Tap through the phone: sign in, book a slot, open a report, pay a bill.</p></div>
+<div class="phone"><div class="scr"><div class="notch"></div>
+<section class="view on" id="login"><div style="height:30px"></div><div class="wm" style="font-size:26px">AKUH Care<small>Karachi</small></div><p class="ur" style="margin-top:6px">آپ کی صحت، آپ کے ہاتھ میں</p>
+<h2 style="margin-top:40px">Welcome back</h2><label class="mut">Mobile number or MR number</label><input value="0300 1234567"><label class="mut">One-time code (sent by SMS)</label><input value="• • • • • •">
+<button class="btn" onclick="go('home')">Sign in securely</button><p class="mut" style="text-align:center;margin:14px 0">or</p><button class="btn g" onclick="go('home')">Continue with fingerprint</button>
+<p class="mut" style="text-align:center;margin-top:24px">English · <span class="ur">اردو</span></p></section>
+<section class="view" id="home"><div class="row"><div><p class="mut">Assalam-o-Alaikum,</p><h2 style="margin:0">Ayesha Khan</h2></div><div class="av">AK</div></div>
+<div class="card hero" style="margin-top:16px"><p>Next appointment</p><h3 style="margin:6px 0">Dr. Imran Siddiqui, Cardiology</h3><p>Thu, 29 Oct · 10:30 AM · Stadium Road, Karachi</p></div>
+<div class="grid"><div class="tile" onclick="go('book')"><i>◔</i><b>Book visit</b><span>Live slots</span></div><div class="tile" onclick="go('reports')"><i>⚗</i><b>Lab reports</b><span>2 new results</span></div><div class="tile" onclick="go('doctors')"><i>✚</i><b>Doctors</b><span>Find a specialist</span></div><div class="tile" onclick="go('bills')"><i>₨</i><b>Billing</b><span>1 pending</span></div></div>
+<h3>Family (Hifazat plan)</h3><div class="card row"><div class="av">AK</div><div class="av" style="background:#17766c">ZK</div><div class="av" style="background:#c99a3a">MK</div><p class="mut" style="flex:1">Switch between family members in one tap</p></div></section>
+<section class="view" id="book"><h2>Book an appointment</h2><label class="mut">Department</label><select><option>Cardiology</option><option>Paediatrics</option><option>Gynaecology</option><option>Orthopaedics</option></select>
+<label class="mut">Doctor</label><select><option>Dr. Imran Siddiqui</option><option>Dr. Farah Naqvi</option></select><h3>Thursday, 29 October</h3><div id="slots"></div>
+<div class="card" style="margin-top:12px"><p class="mut">Slot held for 5 minutes while you confirm, so it cannot be double-booked.</p></div><button class="btn" onclick="toast('Booked. Confirmation sent by SMS and WhatsApp.');setTimeout(()=>go('home'),1200)">Confirm booking</button></section>
+<section class="view" id="reports"><h2>Lab reports</h2><p class="mut" style="margin-bottom:12px">Reports designed to open even on weak signal, and saved for offline viewing after the first open.</p>
+<div class="card" onclick="go('rep1')" style="cursor:pointer"><div class="row"><b>Complete Blood Count</b><span class="ok">Ready</span></div><p class="mut">26 Oct 2026 · Haematology</p></div>
+<div class="card" onclick="go('rep1')" style="cursor:pointer"><div class="row"><b>HbA1c</b><span class="ok">Ready</span></div><p class="mut">26 Oct 2026 · Chemistry</p></div>
+<div class="card"><div class="row"><b>Lipid Profile</b><span class="warn">Processing</span></div><p class="mut">Expected today, 6:00 PM. We will notify you.</p></div></section>
+<section class="view" id="rep1"><a class="mut" onclick="go('reports')" style="cursor:pointer">‹ Reports</a><h2>Complete Blood Count</h2><div class="pdf"><div class="row"><b>AKUH Care</b><span class="mut">Sample #A-20481</span></div><p class="mut">Ayesha Khan · F · 34y · Collected 26 Oct 2026, 8:12 AM</p><br>
+<table><tr><td>Haemoglobin<div class="bar"><span style="left:30%;width:40%"></span></div></td><td>12.8 g/dL</td></tr><tr><td>WBC<div class="bar"><span style="left:35%;width:30%"></span></div></td><td>7.2 ×10⁹/L</td></tr><tr><td>Platelets<div class="bar"><span style="left:40%;width:30%"></span></div></td><td>245 ×10⁹/L</td></tr><tr><td>MCV<div class="bar"><span style="left:30%;width:35%"></span></div></td><td>86 fL</td></tr></table>
+<p class="mut" style="margin-top:10px">All values within reference range. Sample values for this demo.</p></div><br><div class="grid"><button class="btn" onclick="toast('PDF saved to your phone')">Download PDF</button><button class="btn g" onclick="toast('Shared with your doctor')">Share</button></div></section>
+<section class="view" id="doctors"><h2>Find a doctor</h2><input placeholder="Search name or specialty"><div><span class="chip on">All</span><span class="chip">Cardiology</span><span class="chip">Paediatrics</span><span class="chip">ENT</span></div><br>
+<div class="card row"><div class="av">IS</div><div style="flex:1"><b>Dr. Imran Siddiqui</b><p class="mut">Cardiology · Mon, Thu</p></div><span class="ok">Today</span></div>
+<div class="card row"><div class="av" style="background:var(--p)">FN</div><div style="flex:1"><b>Dr. Farah Naqvi</b><p class="mut">Cardiology · Tue, Sat</p></div><span class="warn">Thu</span></div>
+<div class="card row"><div class="av">SR</div><div style="flex:1"><b>Dr. Sana Rauf</b><p class="mut">Paediatrics · Daily</p></div><span class="ok">Today</span></div>
+<p class="mut" style="text-align:center">Doctor names are placeholders.</p></section>
+<section class="view" id="bills"><h2>Billing</h2><div class="card hero"><p>Outstanding</p><h2 style="margin:4px 0">Rs 4,850</h2><p>OPD consultation + lab, 26 Oct</p></div>
+<div class="card"><table><tr><td>Consultation</td><td>Rs 2,500</td></tr><tr><td>CBC</td><td>Rs 1,150</td></tr><tr><td>HbA1c</td><td>Rs 1,200</td></tr></table></div>
+<h3>Pay with</h3><div><span class="chip on">JazzCash</span><span class="chip">Easypaisa</span><span class="chip">Card</span><span class="chip">Raast</span></div><br><button class="btn" onclick="toast('Payment received. Receipt emailed.')">Pay Rs 4,850</button></section>
+<div class="toast" id="t"></div>
+<nav class="tab" id="tab" style="display:none"><a onclick="go('home')" data-v="home"><i>⌂</i>Home</a><a onclick="go('book')" data-v="book"><i>◔</i>Book</a><a onclick="go('reports')" data-v="reports"><i>⚗</i>Reports</a><a onclick="go('doctors')" data-v="doctors"><i>✚</i>Doctors</a><a onclick="go('bills')" data-v="bills"><i>₨</i>Bills</a></nav>
+</div></div>
+<div class="badge">Concept demo by TS Ventures, not an official site or app (AKUH)</div>
+<script>
+function go(v){document.querySelectorAll('.view').forEach(e=>e.classList.toggle('on',e.id==v));document.getElementById('tab').style.display=v=='login'?'none':'flex';document.querySelectorAll('.tab a').forEach(a=>a.classList.toggle('on',a.dataset.v==v))}
+function toast(m){const t=document.getElementById('t');t.textContent=m;t.classList.add('on');setTimeout(()=>t.classList.remove('on'),2000)}
+const s=document.getElementById('slots');['9:00','9:30','10:00','10:30','11:30','12:00','2:00','2:30'].forEach((x,i)=>{const c=document.createElement('span');c.className='chip'+(i==3?' on':'');c.textContent=x+(i<6?' AM':' PM').replace('12:00 AM','12:00 PM');if(i==2){c.style.opacity=.35;c.title='Booked'}c.onclick=()=>{s.querySelectorAll('.chip').forEach(z=>z.classList.remove('on'));c.classList.add('on')};s.appendChild(c)});
+</script></body></html>
