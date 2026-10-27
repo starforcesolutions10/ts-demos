@@ -32,7 +32,7 @@ body{flex-direction:row-reverse;font-family:"DM Sans",system-ui,sans-serif;backg
 .fix{border-left:0;border-radius:999px;padding:12px 20px;background:#0b4f4a;color:#d9f2ec}.fix b{display:inline;color:#fff;margin-right:8px}
 .card,.tile{border-radius:26px}.tile i{width:44px;height:44px;border-radius:50%;background:#e1f3ef;color:#0b4f4a;display:grid!important;place-items:center;font-size:20px}
 .btn{border-radius:999px}.chip{border-radius:999px}.tab{margin:0 14px 16px;border-radius:24px;border:0;box-shadow:0 8px 24px #0b4f4a22;padding:10px 0 12px}</style></head><body>
-<div class="side"><div class="wm">AKUH Care<small>Patient App, reimagined</small></div><h1>One patient app.<br>Finally worth five stars.</h1><p>Today AKUH Patient Care sits at 1.7 stars from 1.18K reviews on Google Play and has not been updated since March 2022, while Family Hifazat sits at 2.8 stars from 730 reviews. This concept merges both into one reliable app.</p><div class="fix"><b>Reliable sign-in</b>OTP + fingerprint</div><div class="fix"><b>Reports that open</b>saved for offline viewing</div><div class="fix"><b>Whole family</b>Hifazat members as profiles</div><p class="mut">Tap through the phone: sign in, book a slot, open a report, pay a bill.</p></div>
+<div class="side"><div class="wm">AKUH Care<small>Patient App, reimagined</small></div><h1>One patient app.<br>Finally worth five stars.</h1><p>Today AKUH Patient Care sits at 3.2 stars from 1,177 ratings on Google Play and has not been updated since 22 March 2022, while Family Hifazat sits at 3.1 stars from 883 ratings. This concept merges both into one reliable app.</p><div class="fix"><b>Reliable sign-in</b>OTP + fingerprint</div><div class="fix"><b>Reports that open</b>saved for offline viewing</div><div class="fix"><b>Whole family</b>Hifazat members as profiles</div><p class="mut">Tap through the phone: sign in, book a slot, open a report, pay a bill.</p></div>
 <div class="phone"><div class="scr"><div class="notch"></div>
 <section class="view on" id="login"><div style="height:30px"></div><div class="wm" style="font-size:26px">AKUH Care<small>Karachi</small></div><p class="ur" style="margin-top:6px">آپ کی صحت، آپ کے ہاتھ میں</p>
 <h2 style="margin-top:40px">Welcome back</h2><label class="mut">Mobile number or MR number</label><input value="0300 1234567"><label class="mut">One-time code (sent by SMS)</label><input value="• • • • • •">
@@ -63,7 +63,7 @@ body{flex-direction:row-reverse;font-family:"DM Sans",system-ui,sans-serif;backg
 <div class="toast" id="t"></div>
 <nav class="tab" id="tab" style="display:none"><a onclick="go('home')" data-v="home"><i>⌂</i>Home</a><a onclick="go('book')" data-v="book"><i>◔</i>Book</a><a onclick="go('reports')" data-v="reports"><i>⚗</i>Reports</a><a onclick="go('doctors')" data-v="doctors"><i>✚</i>Doctors</a><a onclick="go('bills')" data-v="bills"><i>₨</i>Bills</a></nav>
 </div></div>
-<div class="badge">Concept demo by TS Ventures, not an official site or app (AKUH)</div>
+<div class="badge">Concept by TS Ventures - not the official website of Aga Khan University Hospital</div>
 <script>
 function go(v){document.querySelectorAll('.view').forEach(e=>e.classList.toggle('on',e.id==v));document.getElementById('tab').style.display=v=='login'?'none':'flex';document.querySelectorAll('.tab a').forEach(a=>a.classList.toggle('on',a.dataset.v==v))}
 function toast(m){const t=document.getElementById('t');t.textContent=m;t.classList.add('on');setTimeout(()=>t.classList.remove('on'),2000)}

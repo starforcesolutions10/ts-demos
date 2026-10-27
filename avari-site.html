@@ -1,0 +1,113 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Avari Hotels - Book Direct | Concept by TS Ventures</title><meta name="robots" content="noindex">
+<meta name="description" content="Concept redesign by TS Ventures. Not the official website of Avari Hotels.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>:root{--fd:"Cormorant Garamond",Georgia,serif;--fb:Jost,system-ui,sans-serif;--fdw:600;--bg:#faf8f4;--card:#fff;--ink:#1a1712;--mut:#6f675b;--pri:#14110d;--onpri:#f3e6c4;--acc:#c6a15b;--onacc:#14110d;--line:#ebe5da;--line2:#dbd2c2;--alt:#f2eee6;--dark:#14110d;--r:4px;--herobg:linear-gradient(180deg,#0e0c09 0%,#1d1912 100%);--heroink:#f6efe1}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}img{max-width:100%}
+.cbar{position:sticky;top:0;z-index:50;background:#111;color:#fff;font:600 12.5px/1.4 system-ui,sans-serif;text-align:center;padding:8px 14px;letter-spacing:.2px}
+.cbar b{color:var(--acc)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+nav.top{position:sticky;top:33px;z-index:40;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 82%,transparent);border-bottom:1px solid var(--line)}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:20px}
+.logo{display:flex;align-items:center;gap:12px;font-family:var(--fd);font-size:22px;font-weight:700;color:var(--pri)}
+.logo .mk{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--pri);color:var(--onpri);font-size:17px;letter-spacing:.5px}
+.links{display:flex;gap:26px;font-size:14.5px;font-weight:500;color:var(--mut)}.links a:hover{color:var(--pri)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:var(--r);font-weight:600;font-size:15px;border:0;cursor:pointer;transition:.25s;font-family:var(--fb)}
+.btn.p{background:var(--pri);color:var(--onpri)}.btn.p:hover{transform:translateY(-2px);box-shadow:0 12px 26px color-mix(in srgb,var(--pri) 35%,transparent)}
+.btn.g{background:transparent;color:var(--ink);border:1.5px solid var(--line2)}.btn.g:hover{border-color:var(--pri);color:var(--pri)}
+.btn.a{background:var(--acc);color:var(--onacc)}
+.hero{position:relative;overflow:hidden;padding:90px 0 80px;background:var(--herobg);color:var(--heroink)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;position:relative;z-index:2}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:2.2px;text-transform:uppercase;font-weight:700;color:var(--acc);margin-bottom:18px}
+.eyebrow:before{content:"";width:28px;height:2px;background:var(--acc)}
+.hero h1{font-family:var(--fd);font-size:clamp(38px,5.4vw,66px);line-height:1.04;font-weight:var(--fdw);letter-spacing:-.5px}
+.hero h1 em{font-style:italic;color:var(--acc)}
+.hero p.lead{font-size:18px;margin:22px 0 30px;max-width:540px;opacity:.86}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+.hero .glow{position:absolute;inset:auto -10% -40% auto;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,var(--acc) 0,transparent 62%);opacity:.18;filter:blur(10px)}
+.trust{display:flex;gap:26px;margin-top:38px;flex-wrap:wrap}
+.trust div{font-size:13px;opacity:.75}.trust b{display:block;font-family:var(--fd);font-size:26px;opacity:1;color:var(--acc)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:calc(var(--r)*1.6);box-shadow:0 20px 50px -20px #0003}
+.panel{padding:26px;color:var(--ink)}
+.panel h3{font-family:var(--fd);font-size:22px;margin-bottom:4px;color:var(--pri)}
+.panel .sub{font-size:13.5px;color:var(--mut);margin-bottom:18px}
+label.f{display:block;font-size:12px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--mut);margin:14px 0 6px}
+select,input[type=text],input[type=date],input[type=number]{width:100%;padding:12px 14px;border:1.5px solid var(--line2);border-radius:var(--r);font:500 15px var(--fb);background:var(--bg);color:var(--ink);outline:none}
+select:focus,input:focus{border-color:var(--pri)}
+input[type=range]{width:100%;accent-color:var(--pri)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.out{margin-top:18px;padding:18px;border-radius:var(--r);background:color-mix(in srgb,var(--pri) 8%,var(--card));border:1px dashed color-mix(in srgb,var(--pri) 40%,transparent)}
+.out .big{font-family:var(--fd);font-size:34px;color:var(--pri);line-height:1.1}
+.out small{color:var(--mut);font-size:12.5px}
+section{padding:90px 0}
+.sh{max-width:680px;margin-bottom:46px}.sh h2{font-family:var(--fd);font-size:clamp(30px,3.6vw,44px);line-height:1.1;font-weight:var(--fdw);color:var(--pri)}
+.sh p{color:var(--mut);margin-top:12px;font-size:17px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.tile{padding:28px;transition:.3s;position:relative;overflow:hidden}
+.tile:hover{transform:translateY(-6px)}
+.tile .ic{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;font-size:24px;background:color-mix(in srgb,var(--acc) 18%,transparent);margin-bottom:18px}
+.tile h4{font-family:var(--fd);font-size:21px;margin-bottom:8px;color:var(--ink)}
+.tile p{color:var(--mut);font-size:15px}
+.tile .tag{position:absolute;top:18px;right:18px;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:5px 10px;border-radius:30px;background:var(--pri);color:var(--onpri)}
+.proj{overflow:hidden;padding:0}
+.proj .vis{height:190px;position:relative;background:var(--pv,linear-gradient(135deg,var(--pri),var(--acc)))}
+.proj .vis span{position:absolute;left:20px;bottom:16px;color:#fff;font-family:var(--fd);font-size:26px;text-shadow:0 2px 12px #0006}
+.proj .bd{padding:22px}.proj .bd p{color:var(--mut);font-size:14.5px}
+.proj .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.proj .meta i{font-style:normal;font-size:12px;padding:5px 10px;border-radius:30px;background:var(--bg);border:1px solid var(--line)}
+.health{background:var(--dark);color:#fff}
+.health .sh h2{color:#fff}.health .sh p{color:#ffffffb0}
+.meter{padding:26px;border-radius:calc(var(--r)*1.6);background:#ffffff0d;border:1px solid #ffffff1f}
+.meter .n{font-family:var(--fd);font-size:44px;color:var(--acc);line-height:1}
+.meter .l{font-size:13px;text-transform:uppercase;letter-spacing:1.4px;opacity:.7;margin-top:8px}
+.meter .bar{height:6px;border-radius:6px;background:#ffffff1f;margin-top:16px;overflow:hidden}.meter .bar i{display:block;height:100%;background:var(--acc);width:0;transition:width 1.6s cubic-bezier(.2,.8,.2,1)}
+.meter .was{font-size:12.5px;opacity:.6;margin-top:10px}
+.quote{padding:34px;font-family:var(--fd);font-size:24px;line-height:1.35}
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.steps div{padding:24px;border-top:3px solid var(--acc);background:var(--card);border-radius:0 0 var(--r) var(--r)}
+.steps div:before{counter-increment:s;content:"0" counter(s);font-family:var(--fd);font-size:30px;color:var(--acc);display:block;margin-bottom:6px}
+.steps b{display:block;margin-bottom:4px}.steps p{font-size:14px;color:var(--mut)}
+.ctaband{background:var(--pri);color:var(--onpri);border-radius:calc(var(--r)*2);padding:54px;display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
+.ctaband h3{font-family:var(--fd);font-size:34px;line-height:1.15;max-width:560px}
+footer{padding:50px 0 40px;color:var(--mut);font-size:14px;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.cnote{margin-top:22px;padding:14px 18px;border-radius:var(--r);background:color-mix(in srgb,var(--acc) 14%,transparent);color:var(--ink);font-size:13.5px}
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(120px);background:#111;color:#fff;padding:14px 20px;border-radius:14px;font-size:14px;z-index:99;transition:.4s;box-shadow:0 20px 40px #0005;max-width:92vw}
+.toast.on{transform:translateX(-50%) translateY(0)}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}.reveal.in{opacity:1;transform:none}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:30px;font-size:13px;font-weight:600;background:#16a34a1f;color:#15803d;border:1px solid #16a34a40}
+.pill:before{content:"";width:8px;height:8px;border-radius:50%;background:#16a34a;box-shadow:0 0 0 4px #16a34a2e;animation:pu 1.8s infinite}
+@keyframes pu{50%{box-shadow:0 0 0 8px #16a34a00}}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.chips button{padding:8px 14px;border-radius:30px;border:1.5px solid var(--line2);background:var(--card);font:600 13px var(--fb);cursor:pointer;color:var(--ink)}
+.chips button.on{background:var(--pri);color:var(--onpri);border-color:var(--pri)}
+.slot{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}.slot button{padding:10px 0;border-radius:10px;border:1.5px solid var(--line2);background:var(--card);font:600 13px var(--fb);cursor:pointer;color:var(--ink)}
+.slot button.on{background:var(--acc);color:var(--onacc);border-color:var(--acc)}
+.slot button:disabled{opacity:.35;text-decoration:line-through;cursor:not-allowed}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr}.grid3,.grid4,.steps{grid-template-columns:1fr 1fr}.links{display:none}section{padding:64px 0}.ctaband{padding:34px}}
+@media(max-width:560px){nav.top{position:relative;top:0}.grid3,.grid4,.steps{grid-template-columns:1fr}.row2{grid-template-columns:1fr}.hero{padding:56px 0}.logo{font-size:18px}nav.top .btn{display:none}}
+.hero h1{font-size:clamp(42px,6vw,74px)}.hero .glow{opacity:.12}</style></head><body>
+<div class="cbar">Concept by <b>TS Ventures</b> - not the official website of Avari Hotels. Built as a proposal; all content is illustrative.</div>
+<nav class="top"><div class="wrap"><a class="logo" href="#"><span class="mk">A</span>Avari</a><div class="links"><a href="#hotels">Hotels</a><a href="#dining">Dining</a><a href="#health">Performance</a><a href="#events">Weddings &amp; events</a></div><a class="btn p" href="#book">Book direct</a></div></nav>
+<header class="hero"><div class="glow"></div><div class="wrap"><div>
+<div class="eyebrow">Lahore - Karachi - since the Avari legacy</div><h1>Pakistani hospitality, <em>booked in three taps.</em></h1><p class="lead">A concept for avari.com that loads in under two seconds, keeps the footer current, and turns every visit into a direct booking instead of an OTA commission.</p>
+<div class="cta"><a class="btn a" href="#book">Check availability</a><a class="btn g" style="color:#f6efe1;border-color:#ffffff44" href="#health">What we measured</a></div><div class="trust"><div><b>Book direct</b>best-rate promise</div><div><b>&lt;2s</b>load target</div><div><b>24/7</b>concierge chat</div></div></div>
+<div class="card panel reveal"><div id="book"></div><h3>Reserve your stay</h3><div class="sub">Direct booking - no third-party fees (concept flow).</div>
+<label class="f">Hotel</label><select id="ht"><option>Avari Lahore</option><option>Avari Towers Karachi</option><option>Beach Luxury Karachi</option><option>Avari Xpress</option></select>
+<div class="row2"><div><label class="f">Check-in</label><input type="date" id="ci"></div><div><label class="f">Nights</label><select id="nt"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option></select></div></div>
+<label class="f">Room</label><div class="chips" id="rm"><button class="on">Deluxe</button><button>Executive</button><button>Suite</button></div>
+<button class="btn p" style="width:100%;justify-content:center;margin-top:16px" onclick="bk()">Check availability</button>
+<div class="out" id="bo" style="display:none"></div></div></div></header>
+<section class="health" id="health"><div class="wrap"><div class="sh reveal"><h2>What a guest experiences on avari.com today</h2><p>From our server on 27 Oct 2026, avari.com took 5.9 to 9.6 seconds to load the homepage across repeated tests, 3 of 13 test requests returned an HTTP 500 server error, and the footer still reads "Copyright © 2022".</p></div><div class="grid4"><div class="meter reveal"><div class="n">6-10s</div><div class="l">Live homepage load</div><div class="bar"><i data-w="35%"></i></div><div class="was">Measured 27 Oct 2026 (curl, 10 runs)</div></div><div class="meter reveal"><div class="n">500</div><div class="l">Server errors seen</div><div class="bar"><i data-w="25%"></i></div><div class="was">HTTP 500 on 3 of 13 test requests</div></div><div class="meter reveal"><div class="n">2022</div><div class="l">Footer year</div><div class="bar"><i data-w="30%"></i></div><div class="was">Signals an unmaintained site</div></div><div class="meter reveal"><div class="n"><2s</div><div class="l">Concept target</div><div class="bar"><i data-w="95%"></i></div><div class="was">Static edge cache + image CDN</div></div></div></div></section><section id="hotels"><div class="wrap"><div class="sh reveal"><h2>Each hotel, its own story</h2><p>Fast property pages with live rates, galleries and dining.</p></div><div class="grid3"><div class="card proj reveal"><div class="vis" style="--pv:linear-gradient(135deg,#1d1912,#6b5530)"><span>Avari Lahore</span></div><div class="bd"><p>On The Mall - business, weddings and the city&#x27;s celebrations.</p><div class="meta"><i>Weddings</i><i>Business</i></div></div></div><div class="card proj reveal"><div class="vis" style="--pv:linear-gradient(135deg,#14212e,#4f6b82)"><span>Avari Towers Karachi</span></div><div class="bd"><p>A Karachi landmark for corporate stays and dining.</p><div class="meta"><i>Corporate</i><i>Dining</i></div></div></div><div class="card proj reveal"><div class="vis" style="--pv:linear-gradient(135deg,#123f48,#c6a15b)"><span>Beach Luxury Karachi</span></div><div class="bd"><p>Heritage by the water, reimagined for today&#x27;s guests.</p><div class="meta"><i>Heritage</i><i>Events</i></div></div></div></div></div></section><section id="dining"><div class="wrap"><div class="sh reveal"><h2>Dining & events, bookable</h2><p>Tables, buffets and banquet enquiries without a phone call.</p></div><div class="grid3"><div class="card tile reveal"><span class=tag>New</span><div class="ic">&#127869;</div><h4>Table reservations</h4><p>Pick a restaurant, time and party size.</p></div><div class="card tile reveal"><div class="ic">&#127881;</div><h4>Wedding planner</h4><p>Halls, menus and capacity in one enquiry.</p></div><div class="card tile reveal"><div class="ic">&#128188;</div><h4>Corporate rates</h4><p>Company logins with negotiated rates.</p></div><div class="card tile reveal"><div class="ic">&#127873;</div><h4>Gift vouchers</h4><p>Buy and send dining or stay vouchers online.</p></div><div class="card tile reveal"><div class="ic">&#11088;</div><h4>Loyalty</h4><p>Returning guests see perks automatically.</p></div><div class="card tile reveal"><div class="ic">&#128172;</div><h4>Concierge chat</h4><p>WhatsApp-style chat on every page.</p></div></div></div></section><section id="events" style="background:var(--alt)"><div class="wrap"><div class="card quote reveal">"Every guest who books direct is a guest you keep." <div style="font:500 14px var(--fb);color:var(--mut);margin-top:14px">The concept is built to move bookings from OTAs back to avari.com.</div></div></div></section><section><div class="wrap"><div class="ctaband reveal"><h3>Want the free performance findings report for avari.com?</h3><a class="btn a" href="mailto:admin@tsventures.org?subject=Avari Hotels%20-%20concept%20walkthrough">Get the free findings report</a></div></div></section>
+<footer><div class="wrap"><div><b style="color:var(--ink)">Avari</b> - concept redesign<br>Lahore - Karachi</div>
+<div style="max-width:520px">Concept by TS Ventures - not the official website of Avari Hotels. Names and marks belong to their owners; this page is a design proposal only and is not affiliated with or endorsed by Avari Hotels. Contact: admin@tsventures.org</div></div></footer>
+<div class="toast" id="toast"></div>
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');e.target.querySelectorAll('.bar i').forEach(b=>b.style.width=b.dataset.w)}}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+function toast(m){const t=document.getElementById('toast');t.innerHTML=m;t.classList.add('on');clearTimeout(window._tt);window._tt=setTimeout(()=>t.classList.remove('on'),4200)}
+document.querySelectorAll('.chips').forEach(c=>c.addEventListener('click',e=>{if(e.target.tagName!=='BUTTON')return;c.querySelectorAll('button').forEach(b=>b.classList.remove('on'));e.target.classList.add('on');c.dispatchEvent(new Event('change'))}));
+document.querySelectorAll('.slot').forEach(c=>c.addEventListener('click',e=>{if(e.target.tagName!=='BUTTON'||e.target.disabled)return;c.querySelectorAll('button').forEach(b=>b.classList.remove('on'));e.target.classList.add('on')}));
+const d=new Date();d.setDate(d.getDate()+7);document.getElementById('ci').value=d.toISOString().slice(0,10);
+function bk(){const o=document.getElementById('bo');o.style.display='block';const r=document.querySelector('#rm .on').textContent;o.innerHTML='<small>'+document.getElementById('ht').value+' - '+r+' - '+document.getElementById('nt').value+' night(s)</small><div class="big">Available</div><small>Direct-booking perks applied: late checkout + breakfast. Rates shown live in the real build.</small>';}</script></body></html>

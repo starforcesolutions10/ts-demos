@@ -1,0 +1,78 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cityzens - Concept App | Concept by TS Ventures</title><meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>:root{--fd:"Baloo 2",system-ui,sans-serif;--fb:Nunito,system-ui,sans-serif;--ink:#1e1b4b;--mut:#64748b;--pri:#1e40af;--acc:#f59e0b;--onacc:#1e1b4b;--page:radial-gradient(800px 500px at 80% 10%,#fef3c7,transparent 60%),radial-gradient(700px 500px at 0% 90%,#dbeafe,transparent 60%),#f8fafc;--app:#f5f7ff;--grad:linear-gradient(135deg,#1e40af,#4f46e5)}*{box-sizing:border-box;margin:0;padding:0}body{font-family:var(--fb);color:var(--ink);background:var(--page);min-height:100vh;-webkit-font-smoothing:antialiased}
+.cbar{position:sticky;top:0;z-index:50;background:#111;color:#fff;font:600 12.5px/1.4 system-ui,sans-serif;text-align:center;padding:8px 14px}.cbar b{color:var(--acc)}
+.stage{display:flex;gap:64px;align-items:center;justify-content:center;padding:48px 24px 60px;flex-wrap:wrap;max-width:1240px;margin:0 auto}
+.side{max-width:440px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:18px;color:var(--pri);margin-bottom:26px}
+.brand i{width:42px;height:42px;border-radius:13px;background:var(--pri);color:#fff;display:grid;place-items:center;font-style:normal;font-size:15px}
+.side h1{font-family:var(--fd);font-size:clamp(34px,4.4vw,50px);line-height:1.05;letter-spacing:-.6px}.side h1 em{font-style:normal;color:var(--pri)}
+.side p.l{color:var(--mut);font-size:17px;line-height:1.6;margin:18px 0 24px}
+.find{background:#fff;border-radius:16px;padding:16px 18px;margin-bottom:12px;box-shadow:0 8px 24px -12px #0003;display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;border:1px solid #0000000d}
+.find .n{font-family:var(--fd);font-weight:800;font-size:22px;color:#dc2626;min-width:64px}.find b{display:block;font-size:14.5px}.find span{font-size:13px;color:var(--mut)}
+.find.fix .n{color:#16a34a}
+.note{font-size:12.5px;color:var(--mut);margin-top:18px;line-height:1.5}
+.phone{width:min(390px,94vw);height:800px;border-radius:52px;background:#0b0d10;padding:13px;box-shadow:0 50px 100px -30px #0007,inset 0 0 0 2px #2a2f36;position:relative;flex-shrink:0}
+.scr{width:100%;height:100%;border-radius:40px;background:var(--app);overflow:hidden;position:relative;display:flex;flex-direction:column}
+.isl{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:118px;height:32px;background:#0b0d10;border-radius:20px;z-index:9}
+.sb{height:50px;display:flex;justify-content:space-between;align-items:flex-end;padding:0 30px 4px;font:700 14px system-ui;color:var(--sbink,#111);flex-shrink:0;position:relative;z-index:5}
+.view{flex:1;overflow-y:auto;padding:10px 18px 18px;display:none}.view.on{display:block;animation:in .35s ease}
+@keyframes in{from{opacity:0;transform:translateY(10px)}}
+.view::-webkit-scrollbar{display:none}
+.hd{display:flex;justify-content:space-between;align-items:center;margin:6px 0 16px}.hd h2{font-family:var(--fd);font-size:25px;letter-spacing:-.3px}.hd small{display:block;color:var(--mut);font-size:13px;font-weight:500}
+.av{width:42px;height:42px;border-radius:50%;background:var(--pri);color:#fff;display:grid;place-items:center;font-weight:800}
+.hero{border-radius:24px;padding:20px;color:#fff;background:var(--grad);position:relative;overflow:hidden;margin-bottom:14px}
+.hero:after{content:"";position:absolute;right:-40px;top:-40px;width:160px;height:160px;border-radius:50%;background:#ffffff1c}
+.hero small{opacity:.85;font-size:12.5px}.hero .big{font-family:var(--fd);font-size:30px;font-weight:800;margin:4px 0}
+.c{background:#fff;border-radius:20px;padding:16px;margin-bottom:12px;box-shadow:0 6px 20px -12px #0002}
+.c h4{font-size:15px;margin-bottom:8px}.mut{color:var(--mut);font-size:13px}
+.q{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}.q button{border:0;background:#fff;border-radius:18px;padding:14px 4px 10px;font:700 11.5px var(--fb);color:var(--ink);cursor:pointer;box-shadow:0 6px 20px -12px #0002}
+.q button span{display:block;font-size:22px;margin-bottom:6px}
+.tl{position:relative;padding-left:22px}.tl div{position:relative;padding:0 0 16px}.tl div:before{content:"";position:absolute;left:-17px;top:5px;width:10px;height:10px;border-radius:50%;background:#cbd5e1}
+.tl div:after{content:"";position:absolute;left:-13px;top:17px;width:2px;height:calc(100% - 12px);background:#e2e8f0}.tl div:last-child:after{display:none}
+.tl div.d:before{background:var(--pri)}.tl div.a:before{background:var(--acc);box-shadow:0 0 0 5px color-mix(in srgb,var(--acc) 30%,transparent);animation:pl 1.6s infinite}
+@keyframes pl{50%{box-shadow:0 0 0 9px transparent}}
+.tl b{font-size:14px;display:block}.tl span{font-size:12.5px;color:var(--mut)}
+.inp{width:100%;padding:13px 14px;border:1.5px solid #e2e8f0;border-radius:14px;font:600 15px var(--fb);background:#fff;margin-bottom:10px;outline:none}.inp:focus{border-color:var(--pri)}
+.go{width:100%;border:0;border-radius:16px;padding:15px;background:var(--pri);color:#fff;font:800 15px var(--fb);cursor:pointer;margin-top:4px}
+.go.alt{background:var(--acc);color:var(--onacc,#fff)}
+.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:10px}.chips::-webkit-scrollbar{display:none}
+.chips button{flex-shrink:0;border:1.5px solid #e2e8f0;background:#fff;border-radius:30px;padding:8px 14px;font:700 13px var(--fb);cursor:pointer;color:var(--ink)}.chips button.on{background:var(--pri);border-color:var(--pri);color:#fff}
+.slots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:8px 0 12px}.slots button{border:1.5px solid #e2e8f0;background:#fff;border-radius:12px;padding:10px 0;font:700 13px var(--fb);cursor:pointer}
+.slots button.on{background:var(--acc);border-color:var(--acc);color:#fff}.slots button:disabled{opacity:.3;text-decoration:line-through}
+.li{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid #f1f5f9}.li:last-child{border:0}.li .ic{width:40px;height:40px;border-radius:12px;background:color-mix(in srgb,var(--pri) 12%,#fff);display:grid;place-items:center;font-size:19px;flex-shrink:0}
+.li b{font-size:14px;display:block}.li .r{margin-left:auto;font-weight:800;font-size:13px}
+.ok{color:#16a34a}.warn{color:#d97706}
+.ring{width:120px;height:120px;border-radius:50%;display:grid;place-items:center;margin:4px auto 10px;background:conic-gradient(var(--pri) calc(var(--v)*1%),#e2e8f0 0)}
+.ring div{width:94px;height:94px;border-radius:50%;background:#fff;display:grid;place-items:center;font-family:var(--fd);font-weight:800;font-size:26px}
+.tabs{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border-top:1px solid #eef2f6;padding:8px 6px 22px;flex-shrink:0}
+.tabs button{border:0;background:none;font:700 11px var(--fb);color:#94a3b8;cursor:pointer;padding:6px 0}.tabs button span{display:block;font-size:21px;margin-bottom:2px;filter:grayscale(1);opacity:.6}
+.tabs button.on{color:var(--pri)}.tabs button.on span{filter:none;opacity:1}
+.toast{position:absolute;left:14px;right:14px;bottom:96px;background:#111;color:#fff;padding:13px 16px;border-radius:16px;font-size:13.5px;transform:translateY(160px);transition:.4s;z-index:20}.toast.on{transform:none}
+.map{height:150px;border-radius:18px;background:linear-gradient(135deg,#e0f2fe,#f0fdf4);position:relative;overflow:hidden;margin-bottom:12px}
+.map svg{position:absolute;inset:0;width:100%;height:100%}
+.foot{max-width:1240px;margin:0 auto;padding:0 24px 40px;color:var(--mut);font-size:13px;text-align:center}
+@media(max-width:560px){.phone{height:760px}.stage{padding-top:28px;gap:36px}}
+</style></head><body>
+<div class="cbar">Concept by <b>TS Ventures</b> - not the official website or app of The City School. Interactive prototype with demo data.</div>
+<div class="stage"><div class="side"><div class="brand"><i>TCS</i>The City School <span style="font-weight:600;color:var(--mut)">&nbsp;concept app</span></div>
+<h1>The parent app <em>Cityzens</em> deserves.</h1><p class="l">A concept rebuild of the Cityzens app for The City School families - timetable, attendance, diary, results and fees that are always up to date.</p><div class="find"><div class="n">3.2</div><div><b>Cityzens rating on Google Play</b><span>531 ratings, 100K+ installs (checked 27 Oct 2026)</span></div></div><div class="find"><div class="n">44/60</div><div><b>Recent reviews rated 1-2 stars</b><span>&quot;no timetable, no attendance, no test results&quot;, &quot;most of the time crashes&quot;, &quot;can&#x27;t even register&quot;</span></div></div><div class="find fix"><div class="n">Live</div><div><b>Data that teachers update in seconds</b><span>Diary, attendance and results sync from the school system; parents get push alerts</span></div></div>
+<p class="note">Findings from the public Google Play listing of com.tcs.tcsapp, read 27 Oct 2026.<br><br>Concept by TS Ventures - not the official website or app of The City School. Tap through the phone: every screen works.</p></div>
+<div class="phone"><div class="scr"><div class="isl"></div><div class="sb"><span>9:41</span><span>&#9679;&#9679;&#9679; 5G</span></div><div class="view on" id="h"><div class="hd"><div><small>Grade 6 - Blue - PECHS Campus</small><h2>Hi, Zara's family</h2></div><div class="av">Z</div></div>
+<div class="hero"><small>Now - Period 3</small><div class="big">Science</div><small>Ms. Hina - Lab 2 - ends 10:40</small></div>
+<div class="q"><button onclick="go('a')"><span>&#9989;</span>Attend.</button><button onclick="toast('Diary: Maths workbook p.42, Q1-10 (due Thu)')"><span>&#128214;</span>Diary</button><button onclick="go('r')"><span>&#128202;</span>Results</button><button onclick="go('f')"><span>&#128179;</span>Fees</button></div>
+<div class="c"><h4>Today's timetable</h4><div class="li"><div class="ic">&#128208;</div><div><b>Maths</b><span class="mut">8:00 - 8:40</span></div><div class="r ok">Done</div></div><div class="li"><div class="ic">&#128218;</div><div><b>English</b><span class="mut">8:45 - 9:25</span></div><div class="r ok">Done</div></div><div class="li"><div class="ic">&#129514;</div><div><b>Science</b><span class="mut">10:00 - 10:40</span></div><div class="r warn">Now</div></div><div class="li"><div class="ic">&#127912;</div><div><b>Art</b><span class="mut">11:00 - 11:40</span></div><div class="r">Next</div></div></div>
+<div class="c" style="background:#fffbeb"><h4>&#128226; PTM on Saturday</h4><p class="mut">Book your 10-minute slot with the class teacher.</p><button class="go alt" style="margin-top:10px" onclick="toast('PTM slot booked: Sat 10:20 AM with Ms. Sana (demo).')">Book a slot</button></div></div><div class="view" id="a"><div class="hd"><div><small>October 2026</small><h2>Attendance</h2></div></div>
+<div class="c" style="text-align:center"><div class="ring" style="--v:96"><div>96%</div></div><b>22 of 23 days present</b><p class="mut">1 leave approved - 12 Oct (fever)</p></div>
+<div class="c"><h4>This week</h4><div class="li"><div class="ic">&#128197;</div><div><b>Mon - Tue - Wed</b><span class="mut">Arrived 7:52, 7:48, 7:55</span></div><div class="r ok">Present</div></div></div>
+<button class="go" onclick="toast('Leave request sent to class teacher - you will be notified when approved (demo).')">Apply for leave</button></div><div class="view" id="r"><div class="hd"><div><small>Term 1 - 2026-27</small><h2>Results</h2></div></div>
+<div class="c"><div class="li"><div class="ic">&#128208;</div><div><b>Maths</b><span class="mut">Class avg 71</span></div><div class="r ok">86</div></div><div class="li"><div class="ic">&#128218;</div><div><b>English</b><span class="mut">Class avg 74</span></div><div class="r ok">81</div></div><div class="li"><div class="ic">&#129514;</div><div><b>Science</b><span class="mut">Class avg 69</span></div><div class="r ok">90</div></div><div class="li"><div class="ic">&#127759;</div><div><b>Urdu</b><span class="mut">Class avg 72</span></div><div class="r warn">68</div></div></div>
+<div class="c" style="background:#eef2ff"><h4>Teacher's note</h4><p class="mut">"Zara is curious and participates well in Science. Urdu reading practice at home will help."</p></div></div><div class="view" id="f"><div class="hd"><div><small>Secure payments</small><h2>Fees</h2></div></div>
+<div class="hero" style="background:linear-gradient(135deg,#f59e0b,#d97706)"><small>November voucher</small><div class="big">Due 10 Nov</div><small>Pay by card, bank app or wallet - receipt in seconds</small></div>
+<div class="c"><div class="li"><div class="ic">&#9989;</div><div><b>October</b><span class="mut">Paid 6 Oct - receipt</span></div><div class="r ok">Paid</div></div><div class="li"><div class="ic">&#9989;</div><div><b>September</b><span class="mut">Paid 5 Sep - receipt</span></div><div class="r ok">Paid</div></div></div>
+<button class="go" onclick="toast('Redirecting to secure payment (demo) - receipt will appear here instantly.')">Pay November voucher</button></div><div class="toast" id="toast"></div><div class="tabs"><button data-v="h" class="on"><span>&#127968;</span>Today</button><button data-v="a" class=""><span>&#9989;</span>Attendance</button><button data-v="r" class=""><span>&#128202;</span>Results</button><button data-v="f" class=""><span>&#128179;</span>Fees</button></div></div></div></div>
+<div class="foot">Names and marks belong to The City School. This prototype is a design proposal by TS Ventures (admin@tsventures.org) and is not affiliated with or endorsed by The City School.</div>
+<script>function go(v){document.querySelectorAll('.view').forEach(x=>x.classList.toggle('on',x.id==v));document.querySelectorAll('.tabs button').forEach(b=>b.classList.toggle('on',b.dataset.v==v))}
+document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>go(b.dataset.v));
+function toast(m){const t=document.getElementById('toast');t.innerHTML=m;t.classList.add('on');clearTimeout(window._t);window._t=setTimeout(()=>t.classList.remove('on'),3800)}
+document.querySelectorAll('.chips,.slots').forEach(c=>c.addEventListener('click',e=>{const b=e.target.closest('button');if(!b||b.disabled)return;c.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on')}));
+</script></body></html>

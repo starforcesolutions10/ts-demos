@@ -33,7 +33,7 @@ body{font-family:"IBM Plex Sans",system-ui,sans-serif;background:#16110f;color:#
 .phone{background:#000;box-shadow:0 0 0 1px #ffffff22,0 40px 100px #7a1f2b55}.scr{background:#fbf7f5;color:#14212b}
 .card,.tile{border-radius:4px;box-shadow:none;border:1px solid #eadfdb}.btn{border-radius:4px;text-transform:uppercase;letter-spacing:1px;font-size:13px}
 .tile i{font-size:18px;color:#7a1f2b}.tab{background:#14212b}.tab a{color:#8a96a0}.tab a.on{color:#fff}</style></head><body>
-<div class="side"><div class="wm">Doctors Hospital<small>Patient App, reimagined</small></div><h1>Your patients, one tap away.</h1><p>The current related app shows only 50+ downloads. This is the patient app we would pair with a rebuilt website.</p><div class="fix"><b>Book</b>live slots</div><div class="fix"><b>Reports</b>one-time-code access</div><div class="fix"><b>Pay</b>JazzCash, Easypaisa, Raast</div><p class="mut">Tap through the phone: sign in, book a slot, open a report, pay a bill.</p></div>
+<div class="side"><div class="wm">Doctors Hospital<small>Patient App, reimagined</small></div><h1>Your patients, one tap away.</h1><p>The only DHMC-branded app we found on Google Play (DHMC EMR) has 100+ installs and no ratings. This is the patient app we would pair with a rebuilt website.</p><div class="fix"><b>Book</b>live slots</div><div class="fix"><b>Reports</b>one-time-code access</div><div class="fix"><b>Pay</b>JazzCash, Easypaisa, Raast</div><p class="mut">Tap through the phone: sign in, book a slot, open a report, pay a bill.</p></div>
 <div class="phone"><div class="scr"><div class="notch"></div>
 <section class="view on" id="login"><div style="height:30px"></div><div class="wm" style="font-size:26px">Doctors Hospital<small>Lahore</small></div><p class="ur" style="margin-top:6px">آپ کی صحت، آپ کے ہاتھ میں</p>
 <h2 style="margin-top:40px">Welcome back</h2><label class="mut">Mobile number or MR number</label><input value="0300 1234567"><label class="mut">One-time code (sent by SMS)</label><input value="• • • • • •">
@@ -64,7 +64,7 @@ body{font-family:"IBM Plex Sans",system-ui,sans-serif;background:#16110f;color:#
 <div class="toast" id="t"></div>
 <nav class="tab" id="tab" style="display:none"><a onclick="go('home')" data-v="home"><i>⌂</i>Home</a><a onclick="go('book')" data-v="book"><i>＋</i>Book</a><a onclick="go('reports')" data-v="reports"><i>◎</i>Reports</a><a onclick="go('doctors')" data-v="doctors"><i>☰</i>Doctors</a><a onclick="go('bills')" data-v="bills"><i>◆</i>Bills</a></nav>
 </div></div>
-<div class="badge">Concept demo by TS Ventures, not an official site or app (Doctors Hospital)</div>
+<div class="badge">Concept by TS Ventures - not the official website of Doctors Hospital &amp; Medical Centre</div>
 <script>
 function go(v){document.querySelectorAll('.view').forEach(e=>e.classList.toggle('on',e.id==v));document.getElementById('tab').style.display=v=='login'?'none':'flex';document.querySelectorAll('.tab a').forEach(a=>a.classList.toggle('on',a.dataset.v==v))}
 function toast(m){const t=document.getElementById('t');t.textContent=m;t.classList.add('on');setTimeout(()=>t.classList.remove('on'),2000)}
